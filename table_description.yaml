@@ -1,0 +1,135 @@
+data_assets:
+  raw_patient:
+    description: "Stores the collected raw patient data."
+    columns:
+      id:
+        type: INTEGER
+        description: "Primary key, auto-incremented."
+      first_name:
+        type: VARCHAR(100)
+        description: "First name of the patient."
+        tests:
+          - not_null
+      last_name:
+        type: VARCHAR(100)
+        description: "Last name of the patient."
+        tests:
+          - not_null
+      birth_date:
+        type: DATE
+        description: "Patient's birth date. Cannot be in the future."
+        tests:
+          - valid_date_format: "%Y-%m-%d"
+          - valid_date: "birth_date <= today"
+      gender:
+        type: VARCHAR(20)
+        description: "Gender of the patient (e.g., Male, Female, Non-Binary)."
+      address:
+        type: VARCHAR(255)
+        description: "Street address of the patient."
+      city:
+        type: VARCHAR(100)
+        description: "City of residence of the patient."
+      state:
+        type: VARCHAR(2)
+        description: "State of residence of the patient."
+      zip_code:
+        type: VARCHAR(10)
+        description: "Postal code of the residence of the patient."
+      phone_number:
+        type: VARCHAR(20)
+        description: "Primary contact number of the patient."
+      email:
+        type: VARCHAR(100)
+        description: "Email of the patient. Must be a valid email format."
+        tests:
+          - regex: "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$"
+      emergency_contact_name:
+        type: VARCHAR(200)
+        description: "Name of the emergency contact of the patient."
+      emergency_contact_phone:
+        type: VARCHAR(20)
+        description: "Phone number of the emergency contact of the patient."
+      blood_type:
+        type: VARCHAR(5)
+        description: "Blood type of the patient."
+      insurance_provider:
+        type: VARCHAR(100)
+        description: "Health insurance provider of the patient."
+      insurance_number:
+        type: VARCHAR(50)
+        description: "Unique insurance number of the patient."
+        tests:
+          - unique
+          - not_null
+      marital_status:
+        type: VARCHAR(20)
+        description: "Marital status of the patient."
+      preferred_language:
+        type: VARCHAR(50)
+        description: "Primary language spoken by the patient."
+      nationality:
+        type: VARCHAR(100)
+        description: "Nationality of the patient."
+      allergies:
+        type: TEXT
+        description: "Known allergies of the patient."
+      last_visit_date:
+        type: DATE
+        description: "Most recent visit date of the patient."
+      created_at:
+        type: TIMESTAMP
+        description: "Timestamp when the patient record was created."
+        tests:
+          - not_null
+      updated_at:
+        type: TIMESTAMP
+        description: "Timestamp of the last update to the patient record."
+        tests:
+          - not_null
+
+  fhir_patient:
+    description: "Stores transformed patient data according to the FHIR model."
+    columns:
+      id:
+        type: VARCHAR(255)
+        description: "FHIR-compliant unique patient identifier."
+        tests:
+          - unique
+          - not_null
+      full_name:
+        type: VARCHAR(200)
+        description: "Full name of the patient (concatenated from first and last names)."
+        tests:
+          - not_null
+      birth_date:
+        type: DATE
+        description: "Birth date of the patient."
+        tests:
+          - valid_date_format: "%Y-%m-%d"
+          - valid_date: "birth_date <= today"
+      gender:
+        type: VARCHAR(20)
+        description: "Gender of the patient."
+      address:
+        type: VARCHAR(255)
+        description: "Full address of the patient."
+      telecom:
+        type: JSONB
+        description: "Concatenated patient's phone and email details stored as JSON."
+        tests:
+          - valid_json_format
+      marital_status:
+        type: VARCHAR(20)
+        description: "Marital status of the patient."
+        tests:
+          - not_null
+      insurance_number:
+        type: VARCHAR(255)
+        description: "Unique insurance number of the patient."
+        tests:
+          - unique
+          - not_null
+      nationality:
+        type: VARCHAR(20)
+        description: "Nationality of the patient."

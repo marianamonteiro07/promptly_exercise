@@ -1,0 +1,13 @@
+first_name,last_name,birth_date,gender,address,city,state,zip_code,phone_number,email,emergency_contact_name,emergency_contact_phone,blood_type,insurance_provider,insurance_number,marital_status,preferred_language,nationality,allergies,last_visit_date
+John,Doe,1985-07-12,Male,"123 Elm St",Boston,MA,02108,555-0123,john.doe@example.com,"Mary Doe",555-0124,A+,Blue Cross,BC123456789,Married,English,USA,"Penicillin, Peanuts",2024-01-05
+Jane,Smith,1990-03-22,Female,"456 Oak Ave",Seattle,WA,98101,555-1234,jane.smith@email.net,"Tom Smith",555-1235,O-,Aetna,AE987654321,Single,Spanish,Mexico,"None",2023-12-15
+Bob,Johnson,,Male,"789 Pine Rd",Austin,TX,78701,,bob.johnson@example.com,"Sarah Johnson",555-5679,AB+,United,UH456789123,Divorced,English,Canada,"Latex",2024-01-08
+Maria,García,1978-11-30,Female,"321 Maple Dr",Miami,FL,33101,555-9876,maria.g@email.com,"Carlos García",555-9877,B-,Cigna,CI789123456,Married,Spanish,Spain,"Sulfa",2023-11-20
+Wei,Chen,1995-04-15,Non-Binary,"567 Cherry Ln",San Francisco,CA,94102,555-4567,,,"",Unknown,Kaiser,KP321654987,Single,Mandarin,China,"Shellfish, Ibuprofen",2024-01-02
+James,O'Connor,1982-09-08,Male,"890 Cedar St",,,,555-7890,james.oc@email.net,"Katie O'Connor",555-7891,A-,Medicare,MC147258369,Widowed,English,Ireland,"None",2023-10-15
+Bob,Johnson,,Male,"789 Pine Rd",Austin,TX,78701,,bob.johnson@anotherexample.com,"Sarah Johnson",555-5679,AB+,United,UH456789123,Divorced,English,Canada,"Latex",2025-01-08
+Aisha,Patel,1988-12-25,Female,"234 Birch Ave",Chicago,IL,60601,555-3456,aisha.p@example.com,"Raj Patel",555-3457,O+,Humana,HU963852741,Married,Hindi,India,"Dairy, Wheat",2024-01-07
+Michael,Schmidt,,,,Portland,OR,97201,555-6789,m.schmidt@email.com,"",555-6790,Unknown,,,"Unknown",German,Germany,"None",2023-09-30
+Sofia,Rodriguez,1992-06-18,Female,"789 Willow St",Los Angeles,CA,90001,555-2345,sofia.r@email.net,"Ana Rodriguez",555-2346,B+,Anthem,AN741852963,Single,Spanish,Argentina,"Aspirin",2024-01-03
+Johnn,Doe,1985-07-12,Male,"",,,,,john.doe@example.com,"Mary Doe",555-0124,A+,Blue Cross,BC123456789,Married,English,USA,"Penicillin, Peanuts",2024-02-15
+David,Kim,1975-01-01,Male,"432 Oak St",New York,NY,10001,555-8901,d.kim@example.com,"Jenny Kim",555-8902,AB-,Fidelis,FI159753468,Married,Korean,South Korea,"Pollen, Soy",2023-12-28
